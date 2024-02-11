@@ -1,10 +1,13 @@
 function Feeling() {
   return (
     <>
-      {/* // TODO: Created header tag "Feedback!"
-  // TODO: progress bar with of current page (ex: 1 of 4 pages)
-  // TODO: "How are you feeling today?"
-  // TODO: <'Next Button'> */}
+      {/* TODO: Created header tag "Feedback!" */}
+      <Header />
+      {/* TODO: progress bar with of current page (ex: 1 of 4 pages) */}
+
+      {/* TODO: "How are you feeling today?" */}
+
+      {/* TODO: <'Next Button'> */}
     </>
   );
 }
