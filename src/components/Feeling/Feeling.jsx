@@ -8,13 +8,15 @@ function Feeling() {
       {/* TODO: progress bar with of current page (ex: 1 of 4 pages) */}
 
       {/* TODO: "How are you feeling today?" */}
-      <h2>How are you feeling today?</h2>
-      <p>Feeling?</p>
-      <input type="number"></input>
-      {/* TODO: <'Next Button'> */}
-      <button type="submit" data-testid="next">
-        Next
-      </button>
+      <div data-testid="input">
+        <h2>How are you feeling today?</h2>
+        <p>Feeling?</p>
+        <input type="number"></input>
+        {/* TODO: <'Next Button'> */}
+        <button type="submit" data-testid="next">
+          Next
+        </button>
+      </div>
     </>
   );
 }
