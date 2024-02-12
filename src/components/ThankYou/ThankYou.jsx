@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function thankYou() {
+  // TODO: Write a function that will navigate to the beginning of the survey
+  // when clicked on the "Leave New Feedback" and reset/delete the previous survey data
   const handleClickNavToSurvey = () => {
-    // TODO: Write a function that will navigate to the beginning of the survey
-    // when clicked on the "Leave New Feedback" and reset/delete the previous survey data
     alert('Your feedback will be reset.');
     history.pushState('/feeling');
     // make axio call - .then/refresh/.catch

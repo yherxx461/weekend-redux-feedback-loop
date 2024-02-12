@@ -1,0 +1,23 @@
+.Header {
+  text-align: center;
+}
+
+.Header-header {
+  background-color: #033076;
+  min-height: 70px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Header-title {
+  font-size: 2em;
+}
+
+.Header-intro {
+  font-size: large;
+}
+
+h4 {
+  font-style: italic;
+}
