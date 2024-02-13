@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function thankYou() {
@@ -16,7 +17,7 @@ function thankYou() {
       {/* <p> Thank You! </p> */}
       <h2>Thank You!</h2>
       {/* TODO: <button onClick of 'Leave New Feedback' /> */}
-      <button onClick={handleClickNavToSurvey}>Leave New Feedback</button>
+      <Button onClick={handleClickNavToSurvey}>Leave New Feedback</Button>
     </>
   );
 }

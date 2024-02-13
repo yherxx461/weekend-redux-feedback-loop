@@ -13,6 +13,7 @@ import Home from '../Home/Home';
 import Review from '../Review/Review';
 
 function App() {
+  // TODO: AXIO CALL
   return (
     <>
       <div className="App">

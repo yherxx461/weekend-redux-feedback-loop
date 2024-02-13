@@ -1,3 +1,4 @@
+import { Button, Link } from '@mui/material';
 import Header from '../Header/Header';
 
 function Understanding() {
@@ -13,9 +14,16 @@ function Understanding() {
         <p>Understanding?</p>
         <input type="number"></input>
         {/* TODO: <'Next Button'> */}
-        <button type="submit" data-testid="next">
-          Next
-        </button>
+        <Link to="/support">
+          <Button
+            variant="outlined"
+            size="small"
+            type="submit"
+            data-testid="next"
+          >
+            Next
+          </Button>
+        </Link>
       </div>
     </>
   );

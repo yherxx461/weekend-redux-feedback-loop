@@ -1,6 +1,5 @@
-import { Button } from '@mui/material';
+import { Button, Link } from '@mui/material';
 import Header from '../Header/Header';
-import './Comments.css';
 
 function Comments() {
   // TODO: Write a function to submit the comment and clear field -- no required
@@ -18,14 +17,16 @@ function Comments() {
         {/* TODO: <input tag for text> */}
         <input type="text"></input>
         {/* TODO: <'Next Button'> and <check mark indicating done> */}
-        <Button
-          variant="outlined"
-          size="small"
-          type="submit"
-          data-testid="next"
-        >
-          Next
-        </Button>
+        <Link to="/review">
+          <Button
+            variant="outlined"
+            size="small"
+            type="submit"
+            data-testid="next"
+          >
+            Next
+          </Button>
+        </Link>
       </form>
     </>
   );

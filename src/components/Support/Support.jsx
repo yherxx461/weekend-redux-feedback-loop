@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Link } from '@mui/material';
 import Header from '../Header/Header';
 
 function Support() {
@@ -14,9 +14,11 @@ function Support() {
         <p>Support?</p>
         <input type="number"></input>
         {/* TODO: <'Next Button'> */}
-        <Button type="submit" data-testid="next">
-          Next
-        </Button>
+        <Link to="/comments">
+          <Button type="submit" data-testid="next">
+            Next
+          </Button>
+        </Link>
       </div>
     </>
   );

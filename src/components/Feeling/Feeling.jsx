@@ -1,6 +1,19 @@
+import { Button, InputLabel, Link, MenuItem, Select } from '@mui/material';
 import Header from '../Header/Header';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Feeling() {
+  const [feelingResponse, setFeelingResponse] = useState(0);
+  const dispatch = useDispatch();
+
+  function handleClickNavNext() {
+    console.log('Feeling response', { feelingResponse });
+    dispatch({
+      type: 'SET_FEELING_RESPONSE',
+      payload: parseInt(feelingResponse),
+    });
+  }
   return (
     <>
       {/* TODO: Created header tag "Feedback!" */}
@@ -11,11 +24,26 @@ function Feeling() {
       <div data-testid="input">
         <h2>How are you feeling today?</h2>
         <p>Feeling?</p>
-        <input type="number"></input>
+        <p>Rate from a scale of 0 - 5. </p>
+        <input
+          type="number"
+          min={0}
+          max={5}
+          value={feelingResponse}
+          onChange={(event) => setFeelingResponse(event.target.value)}
+        ></input>
         {/* TODO: <'Next Button'> */}
-        <button type="submit" data-testid="next">
-          Next
-        </button>
+        <Link to="/understanding">
+          <Button
+            data-testid="next"
+            variant="outlined"
+            size="small"
+            type="submit"
+            onClick={handleClickNavNext}
+          >
+            Next
+          </Button>
+        </Link>
       </div>
     </>
   );

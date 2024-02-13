@@ -11,9 +11,16 @@ function Review() {
       <p>Support: {`support.value`}</p>
       <p>Comments: {`comment.value`}</p>
       {/* TODO: <Submit Button> */}
-      <Button variant="outlined" size="small" type="submit" data-testid="next">
-        Submit
-      </Button>
+      <Link to="/thankyou">
+        <Button
+          variant="outlined"
+          size="small"
+          type="submit"
+          data-testid="next"
+        >
+          Submit
+        </Button>
+      </Link>
     </>
   );
 }
