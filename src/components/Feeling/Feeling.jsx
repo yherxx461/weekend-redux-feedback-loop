@@ -30,7 +30,6 @@ function Feeling() {
           <input
             data-testid="input"
             type="number"
-            placeholder="Rating from 0-5"
             min={0}
             max={5}
             value={feelingResponse}
