@@ -6,16 +6,16 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
   console.log('POST ROUTER');
 
-  let queryText =
-    'INSERT INTO "feedback" ("feeling", "understanding", "support", "comment") VALUES ($1, $2, @3, $4);';
+  let sqlText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") VALUES ($1, $2, @3, $4);`;
 
+  const sqlValues = [
+    req.body.feeling,
+    req.body.understanding,
+    req.body.support,
+    req.body.comments,
+  ];
   pool
-    .query(queryText, [
-      req.body.feeling,
-      req.body.understanding,
-      req.body.support,
-      req.body.comments,
-    ])
+    .query(sqlText, sqlValues)
     .then((result) => {
       //SUCCESS
       res.sendStatus(200);
