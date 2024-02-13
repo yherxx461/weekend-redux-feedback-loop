@@ -15,7 +15,7 @@ function Comments() {
     setCommentsResponse('');
   };
   const handleCommentsUpdate = (event) => {
-    console.log(feelingResponse);
+    console.log(commentsResponse);
     setCommentsResponse(event.target.value);
   };
   return (
@@ -35,17 +35,15 @@ function Comments() {
             onChange={handleCommentsToNext}
           ></input>
           {/* TODO: <'Next Button'> and <check mark indicating done> */}
-          <Link to="/review">
-            <Button
-              data-testid="next"
-              variant="outlined"
-              size="small"
-              defaultValue={commentsResponse}
-              onClick={handleCommentsUpdate}
-            >
-              Next
-            </Button>
-          </Link>
+          <Button
+            data-testid="next"
+            variant="outlined"
+            size="small"
+            defaultValue={commentsResponse}
+            onClick={handleCommentsUpdate}
+          >
+            <Link to="/review">Next</Link>
+          </Button>
         </form>
       </main>
     </>
