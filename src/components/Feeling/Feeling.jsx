@@ -36,17 +36,15 @@ function Feeling() {
             onChange={handleFeelingUpdate}
           ></input>
           {/* TODO: <'Next Button'> */}
-          <Link to="/understanding">
-            <Button
-              data-testid="next"
-              variant="outlined"
-              size="small"
-              type="submit"
-              onClick={handleFeelingToNext}
-            >
-              Next
-            </Button>
-          </Link>
+          <Button
+            data-testid="next"
+            onClick={handleFeelingToNext}
+            variant="outlined"
+            size="small"
+            type="submit"
+          >
+            <Link to="/understanding">Next</Link>
+          </Button>
         </form>
       </main>
     </>
