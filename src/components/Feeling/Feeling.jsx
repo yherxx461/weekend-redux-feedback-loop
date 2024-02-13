@@ -1,4 +1,5 @@
-import { Button, Link } from '@mui/material';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -7,6 +8,7 @@ function Feeling() {
   const dispatch = useDispatch();
 
   const handleFeelingToNext = (event) => {
+    console.log('Feeling response', { feelingResponse });
     dispatch({
       type: 'SET_FEELING_RESPONSE',
       payload: parseInt(feelingResponse),
@@ -41,7 +43,6 @@ function Feeling() {
             onClick={handleFeelingToNext}
             variant="outlined"
             size="small"
-            type="submit"
           >
             <Link to="/understanding">Next</Link>
           </Button>
