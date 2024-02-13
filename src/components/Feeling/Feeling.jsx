@@ -1,5 +1,4 @@
-import { Button, InputLabel, Link, MenuItem, Select } from '@mui/material';
-import Header from '../Header/Header';
+import { Button, Link } from '@mui/material';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -16,10 +15,8 @@ function Feeling() {
   }
   return (
     <>
-      {/* TODO: Created header tag "Feedback!" */}
-      <Header />
-      {/* TODO: progress bar with of current page (ex: 1 of 4 pages) */}
-
+      {/* TODO: Created header tag "Feedback!" ---> no longer needed as it's only from the admin side of things*/}
+      {/* TODO: progress bar with of current page (ex: 1 of 4 pages) ---> no longer needed as it's only from the admin side of things*/}
       {/* TODO: "How are you feeling today?" */}
       <div data-testid="input">
         <h2>How are you feeling today?</h2>

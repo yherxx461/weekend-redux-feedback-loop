@@ -1,10 +1,8 @@
-import Header from '../Header/Header';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function Home() {
   return (
     <>
-      <Header />
       <div>
         {/* NAVIGATION for pages */}
         <ul>

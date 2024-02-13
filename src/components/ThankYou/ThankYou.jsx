@@ -1,5 +1,4 @@
 import { Button } from '@mui/material';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 function thankYou() {
   // TODO: Write a function that will navigate to the beginning of the survey

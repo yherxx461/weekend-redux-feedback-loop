@@ -1,14 +1,11 @@
 import { Button, Link } from '@mui/material';
-import Header from '../Header/Header';
 
 function Comments() {
   // TODO: Write a function to submit the comment and clear field -- no required
   return (
     <>
-      {/* // TODO: Created header tag "Feedback!" */}
-      <Header />
-      {/* <Header /> */}
-      {/* TODO: progress bar with of current page (ex: 4 of 4 pages) */}
+      {/* // TODO: Created header tag "Feedback!" ---> no longer needed as it's only from the admin side of things */}
+      {/* TODO: progress bar with of current page (ex: 4 of 4 pages) ---> no longer needed as it's only from the admin side of things */}
 
       {/* TODO: "Any comments you want to leave?" */}
       <form data-testid="input">
