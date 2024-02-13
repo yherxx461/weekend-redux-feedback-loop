@@ -15,6 +15,9 @@ function thankYou() {
 
       {/* <p> Thank You! </p> */}
       <h2>Thank You!</h2>
+      <p id="thankyou">
+        You've completed the survey! We appreciate your feedback!
+      </p>
       {/* TODO: <button onClick of 'Leave New Feedback' /> */}
       <Button onClick={handleClickNavToSurvey}>Leave New Feedback</Button>
     </>
