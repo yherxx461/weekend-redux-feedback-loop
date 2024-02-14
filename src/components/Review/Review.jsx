@@ -1,13 +1,45 @@
-import { Button, Link } from '@mui/material';
+import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
 
 function Review() {
-  const feelingResponse = useSelector((store) => store.feelingResponse);
+  const feelingResponse = useSelector((state) => state.feelingResponse);
   const understandingResponse = useSelector(
-    (store) => store.understandingResponse
+    (state) => state.understandingResponse
   );
-  const supportResponse = useSelector((store) => store.supportResponse);
-  const commentsResponse = useSelector((store) => store.commentsResponse);
+  const supportResponse = useSelector((state) => state.supportResponse);
+  const commentsResponse = useSelector((state) => state.commentsResponse);
+
+  // const [response, newResponse] = useState('');
+
+  const dispatch = useDispatch();
+
+  // TODO: handle function to submit reviews
+  const handleSubmit = (event) => {
+    // event.preventDefault();
+    // axios call to add the responses to the database
+    axios
+      // method: 'POST',
+      // url: '/api/feedback',
+      .post('/api/feedback', {
+        feelingResponse,
+        understandingResponse,
+        supportResponse,
+        commentsResponse,
+      })
+      .then((response) => {
+        console.log('POSTING data success');
+        dispatch({
+          type: 'RESET_FEEDBACK',
+        });
+      })
+      .catch((error) => {
+        console.error('ERROR API POST CALL', error);
+      });
+  };
+
   return (
     <>
       {/* TODO: Create <p> tag "Review Your Feedback" */}
@@ -18,18 +50,16 @@ function Review() {
       <p>Support: {supportResponse}</p>
       <p>Comments: {commentsResponse}</p>
       {/* TODO: <Submit Button> */}
-      <Link to="/thankyou">
-        <Button
-          variant="outlined"
-          size="small"
-          type="submit"
-          data-testid="next"
-        >
-          Submit
-        </Button>
-      </Link>
+      <Button
+        data-testid="next"
+        type="submit"
+        variant="outlined"
+        size="small"
+        onClick={handleSubmit}
+      >
+        <Link to="/thankyou">Submit</Link>
+      </Button>
     </>
   );
 }
-
 export default Review;
