@@ -32,15 +32,15 @@ function Comments() {
           <input
             data-testid="input"
             type="text"
-            onChange={handleCommentsToNext}
+            onChange={handleCommentsUpdate}
           ></input>
           {/* TODO: <'Next Button'> and <check mark indicating done> */}
           <Button
             data-testid="next"
             variant="outlined"
             size="small"
-            defaultValue={commentsResponse}
-            onClick={handleCommentsUpdate}
+            value={commentsResponse}
+            onClick={handleCommentsToNext}
           >
             <Link to="/review">Next</Link>
           </Button>
