@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
+// import './Review.css';
 
 function Review() {
   const feelingResponse = useSelector((state) => state.feelingResponse);
@@ -41,7 +42,7 @@ function Review() {
   };
 
   return (
-    <>
+    <main className="review">
       {/* TODO: Create <p> tag "Review Your Feedback" */}
       <h2>Review Your Feedback</h2>
       {/* TODO: List out feelings, understanding, support, and comments values. */}
@@ -59,7 +60,7 @@ function Review() {
       >
         <Link to="/thankyou">Submit</Link>
       </Button>
-    </>
+    </main>
   );
 }
 export default Review;

@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+// import './Support.css';
 
 function Support() {
   const [supportResponse, setSupportResponse] = useState(0);

@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+// import './Comments.css';
 
 function Comments() {
   // TODO: Write a function to submit the comment and clear field -- no required
@@ -24,7 +25,7 @@ function Comments() {
       {/* TODO: progress bar with of current page (ex: 4 of 4 pages) ---> no longer needed as it's only from the admin side of things */}
 
       {/* TODO: "Any comments you want to leave?" */}
-      <main>
+      <main className="comments">
         <h2>Do you have any comments or concerns?</h2>
         <form>
           <p>Comments</p>

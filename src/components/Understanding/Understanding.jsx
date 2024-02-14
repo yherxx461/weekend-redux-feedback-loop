@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+// import './Understanding.css';
 
 function Understanding() {
   const [understandingResponse, setUnderstandingResponse] = useState(0);

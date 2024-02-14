@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+// import './Feeling.css';
 
 function Feeling() {
   const [feelingResponse, setFeelingResponse] = useState(0);
@@ -27,26 +28,24 @@ function Feeling() {
       {/* TODO: "How are you feeling today?" */}
       <main className="feeling">
         <h2>How are you feeling today?</h2>
-        <form>
-          <p>Feeling?</p>
-          <input
-            data-testid="input"
-            type="number"
-            min={0}
-            max={5}
-            value={feelingResponse}
-            onChange={handleFeelingUpdate}
-          ></input>
-          {/* TODO: <'Next Button'> */}
-          <Button
-            data-testid="next"
-            onClick={handleFeelingToNext}
-            variant="outlined"
-            size="small"
-          >
-            <Link to="/understanding">Next</Link>
-          </Button>
-        </form>
+        <p>Feeling?</p>
+        <input
+          data-testid="input"
+          type="number"
+          min={0}
+          max={5}
+          value={feelingResponse}
+          onChange={handleFeelingUpdate}
+        ></input>
+        {/* TODO: <'Next Button'> */}
+        <Button
+          data-testid="next"
+          onClick={handleFeelingToNext}
+          variant="outlined"
+          size="small"
+        >
+          <Link to="/understanding">Next</Link>
+        </Button>
       </main>
     </>
   );

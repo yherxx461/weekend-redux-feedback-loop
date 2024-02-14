@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
@@ -9,11 +9,10 @@ import Understanding from '../Understanding/Understanding';
 import Support from '../Support/Support';
 import Comments from '../Comments/Comments';
 import ThankYou from '../ThankYou/ThankYou';
-import Home from '../Home/Home';
+// import Home from '../Home/Home';
 import Review from '../Review/Review';
 
 function App() {
-  // TODO: AXIO CALL
   return (
     <>
       <div className="App">
@@ -22,11 +21,13 @@ function App() {
           <h4>Don't forget it!</h4>
         </header>
         {/* Linking different components here to see how each page works/rendering */}
+        {/* <Route path="/" exact>
+            <Home />
+          </Route> */}
+      </div>
+      <main>
         <Router>
           <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/feeling">
             <Feeling />
           </Route>
           <Route path="/understanding">
@@ -45,7 +46,7 @@ function App() {
             <Review />
           </Route>
         </Router>
-      </div>
+      </main>
     </>
   );
 }
