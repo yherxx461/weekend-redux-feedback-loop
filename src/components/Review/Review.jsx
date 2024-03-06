@@ -6,12 +6,12 @@ import axios from 'axios';
 // import './Review.css';
 
 function Review() {
-  const feelingResponse = useSelector((state) => state.feelingResponse);
+  const feelingResponse = useSelector((store) => store.feelingResponse);
   const understandingResponse = useSelector(
-    (state) => state.understandingResponse
+    (store) => store.understandingResponse
   );
-  const supportResponse = useSelector((state) => state.supportResponse);
-  const commentsResponse = useSelector((state) => state.commentsResponse);
+  const supportResponse = useSelector((store) => store.supportResponse);
+  const commentsResponse = useSelector((store) => store.commentsResponse);
 
   // const [response, newResponse] = useState('');
 
